@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Full Price List — Solutions by Danielle</title>
+<meta name="description" content="Transparent pricing for every treatment at Solutions by Danielle. Anti-wrinkle, dermal fillers, Profhilo, advanced facials and more — consultation included." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:        #f4f1ec;
+    --bg-cream:  #ebe6db;
+    --ink:       #1c2620;
+    --ink-soft:  #3d4a42;
+    --muted:     #7a8479;
+    --line:      #d6d1c4;
+    --sage:      #6b7d6a;
+    --sage-deep: #3e4e3f;
+    --moss:      #2d3a2e;
+    --amber:     #c98a3c;
+    --amber-soft:#e8b878;
+    --paper:     #fbfaf6;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter', sans-serif;
+    font-weight:300;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:400;
+    letter-spacing:-.015em;
+    color:var(--ink);
+    font-variation-settings:"opsz" 96, "SOFT" 50;
+  }
+  a{color:inherit;text-decoration:none}
+
+  .container{width:min(1100px, 92%);margin:0 auto}
+
+  /* ——— NAV ——— */
+  nav.main{
+    position:sticky;top:0;z-index:100;
+    background:rgba(244,241,236,.95);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border-bottom:1px solid var(--line);
+  }
+  nav.main .container{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:1.3rem 0;
+  }
+  .logo{display:flex;align-items:center;gap:.7rem}
+  .logo-mark{
+    width:36px;height:36px;
+    background:var(--moss);
+    color:var(--amber-soft);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-size:1.3rem;font-weight:500;
+    border-radius:50%;
+  }
+  .logo-text{
+    font-family:'Fraunces',serif;
+    font-size:1.15rem;letter-spacing:.005em;
+    color:var(--ink);font-weight:500;
+    line-height:1.05;
+  }
+  .logo-text em{
+    font-style:italic;font-weight:400;
+    color:var(--sage-deep);
+    margin-left:.2rem;
+  }
+  .logo-text small{
+    display:block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.52rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--muted);margin-top:.2rem;
+    font-weight:400;
+  }
+  .logo-text .logo-est{
+    color:var(--sage-deep);
+    margin-top:.05rem;
+    letter-spacing:.32em;
+  }
+  
+  .nav-links{display:flex;gap:1.6rem;align-items:center}
+  .nav-links > a{
+    font-size:.84rem;color:var(--ink-soft);font-weight:400;
+    position:relative;transition:color .3s;
+  }
+  .nav-links > a:hover{color:var(--sage-deep)}
+  .nav-links > a.active{color:var(--sage-deep)}
+  .nav-links > a::after{
+    content:"";position:absolute;left:0;bottom:-4px;
+    height:1px;width:0;background:var(--sage-deep);
+    transition:width .35s ease;
+  }
+  .nav-links > a:hover::after,
+  .nav-links > a.active::after{width:100%}
+  .nav-links > a.btn{color:#ffffff}
+  .nav-links > a.btn::after{display:none}
+  .btn{
+    display:inline-flex;align-items:center;gap:.6rem;
+    background:var(--moss);color:#ffffff;
+    padding:.9rem 1.5rem;
+    font-size:.82rem;font-weight:500;
+    border:none;cursor:pointer;
+    transition:all .35s ease;
+    border-radius:999px;
+  }
+  .btn::after{content:"→";transition:transform .3s ease}
+  .btn:hover{background:var(--sage-deep);transform:translateY(-1px)}
+  .btn:hover::after{transform:translateX(3px)}
+
+  /* ——— PAGE HEADER ——— */
+  .page-head{
+    padding:5rem 0 2.5rem;
+    text-align:center;
+  }
+  .back-link{
+    display:inline-block;
+    margin-bottom:2rem;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);
+    transition:color .25s ease, transform .25s ease;
+  }
+  .back-link:hover{
+    color:var(--sage-deep);
+    transform:translateX(-3px);
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;
+    color:var(--sage-deep);
+    display:inline-flex;align-items:center;gap:.7rem;
+    margin-bottom:1.5rem;
+  }
+  .eyebrow::before{
+    content:"";width:28px;height:1px;background:var(--sage-deep);
+  }
+  .page-head h1{
+    font-size:clamp(2.4rem, 5vw, 4rem);
+    line-height:1.05;
+    margin-bottom:1.2rem;
+  }
+  .page-head h1 em{
+    font-style:italic;color:var(--sage-deep);
+    font-variation-settings:"opsz" 144;
+  }
+  .page-head .sub{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:clamp(1.05rem, 1.5vw, 1.25rem);
+    color:var(--ink-soft);
+    font-weight:300;
+    max-width:62ch;
+    margin:0 auto;
+    line-height:1.6;
+  }
+
+  /* ——— CATEGORY TABS ——— */
+  .tabs{
+    display:flex;justify-content:center;flex-wrap:wrap;
+    gap:.5rem;
+    margin:2.5rem auto 1rem;
+    padding:0 1rem;
+  }
+  .tab{
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:.7rem 1.3rem;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:all .25s ease;
+  }
+  .tab:hover{
+    border-color:var(--sage);
+    color:var(--sage-deep);
+  }
+  .tab.active{
+    background:var(--moss);
+    border-color:var(--moss);
+    color:var(--paper);
+  }
+
+  /* ——— PRICE LIST ——— */
+  .price-list{padding:2rem 0 5rem}
+  .category{
+    margin-bottom:3rem;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:20px;
+    overflow:hidden;
+  }
+  .cat-head{
+    padding:2rem 2.2rem 1.5rem;
+    border-bottom:1px solid var(--line);
+    display:flex;align-items:baseline;justify-content:space-between;
+    gap:1rem;flex-wrap:wrap;
+  }
+  .cat-head h2{
+    font-size:1.7rem;
+    font-weight:400;
+    line-height:1.1;
+  }
+  .cat-head .cat-note{
+    font-family:'JetBrains Mono',monospace;
+    font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--amber);
+  }
+  .price-rows{
+    padding:.5rem 2.2rem 1.5rem;
+  }
+  .row{
+    display:flex;align-items:flex-start;justify-content:space-between;
+    gap:2rem;
+    padding:1.1rem 0;
+    border-bottom:1px solid var(--line);
+  }
+  .row:last-child{border-bottom:none}
+  .row-name{
+    flex:1;
+  }
+  .row-name strong{
+    font-family:'Fraunces',serif;
+    font-size:1.08rem;
+    font-weight:500;
+    color:var(--ink);
+    display:block;
+    margin-bottom:.2rem;
+  }
+  .row-name span{
+    font-size:.88rem;
+    color:var(--ink-soft);
+    line-height:1.55;
+  }
+  .row-price{
+    font-family:'Fraunces',serif;
+    font-size:1.15rem;
+    font-weight:500;
+    color:var(--ink);
+    white-space:nowrap;
+    flex-shrink:0;
+    padding-top:.1rem;
+  }
+  .row-price.tba{
+    font-style:italic;
+    color:var(--muted);
+    font-size:.95rem;
+    font-weight:400;
+  }
+
+  .info-strip{
+    background:var(--bg-cream);
+    padding:1.4rem 2.2rem;
+    font-size:.85rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+  .info-strip strong{
+    color:var(--sage-deep);
+    font-weight:500;
+  }
+
+  /* ——— CTA BAND ——— */
+  .cta-band{
+    padding:3.5rem 0;
+    background:var(--moss);
+    color:var(--paper);
+    text-align:center;
+  }
+  .cta-band h2{
+    color:var(--paper);
+    font-size:clamp(1.6rem, 3vw, 2.4rem);
+    margin-bottom:1.5rem;
+  }
+  .cta-band h2 em{
+    font-style:italic;color:var(--amber-soft);
+    font-variation-settings:"opsz" 144;
+  }
+  .cta-band .btn{
+    background:var(--amber);color:var(--ink);
+  }
+  .cta-band .btn:hover{background:var(--amber-soft)}
+
+  /* ——— FOOTER ——— */
+  footer{
+    background:var(--ink);color:#bcc5b9;
+    padding:3rem 0 1.5rem;
+  }
+  footer .container{
+    display:flex;justify-content:space-between;align-items:center;
+    flex-wrap:wrap;gap:1rem;
+    font-size:.82rem;
+  }
+  footer a:hover{color:var(--amber-soft)}
+
+  @media (max-width: 640px){
+    .nav-links > a:not(.btn){display:none}
+    .cat-head,.price-rows,.info-strip{padding-left:1.4rem;padding-right:1.4rem}
+    .row{flex-direction:column;gap:.4rem;align-items:flex-start}
+    .row-price{padding-top:0}
+  }
+
+  
+  /* --- One-line nav --- */
+  /* Keep the top nav on a single line at every screen width.
+     Strategy: prevent wrapping on the nav-links container, let the
+     anchor labels wrap-protect themselves, and gracefully tighten
+     gap/font/padding as the viewport narrows. */
+  .nav-links{
+    flex-wrap:nowrap;
+    white-space:nowrap;
+  }
+  .nav-links > a{
+    white-space:nowrap;
+  }
+  /* Allow the logo subtitle text to truncate so it doesn't push the
+     nav links off-screen on narrow viewports. */
+  nav.main .container{flex-wrap:nowrap}
+  .logo{flex-shrink:1;min-width:0}
+  .logo-text{min-width:0}
+  /* Progressive squeeze as the viewport narrows */
+  @media (max-width: 1180px){
+    .nav-links{gap:1.5rem}
+    .nav-links > a{font-size:.8rem}
+    .nav-links > a.btn{padding:.7rem 1.1rem}
+  }
+  @media (max-width: 1020px){
+    .nav-links{gap:1.1rem}
+    .nav-links > a{font-size:.75rem}
+    .nav-links > a.btn{padding:.6rem .95rem;font-size:.75rem}
+    .logo-text{font-size:1rem}
+    .logo-text small{display:none}
+  }
+  @media (max-width: 880px){
+    .nav-links{gap:.85rem}
+    .nav-links > a{font-size:.72rem}
+    .nav-links > a.btn{padding:.55rem .8rem}
+    .logo-text em{display:none}
+  }
+
+  
+  /* === LOGO CONSISTENCY OVERRIDE (matches homepage) === */
+  .logo{
+    display:flex;align-items:center;gap:.7rem;
+    transform:translateY(-6px);
+  }
+  .logo-mark{
+    width:36px;height:36px;
+    background:var(--moss);
+    color:var(--amber-soft);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Fraunces',serif;font-size:1.3rem;font-weight:500;
+    border-radius:50%;
+  }
+  .logo-text{
+    font-family:'Fraunces',serif;
+    font-size:1.15rem;letter-spacing:.005em;
+    color:var(--ink);font-weight:500;
+    line-height:1.05;
+  }
+  .logo-text em{
+    font-style:italic;font-weight:400;
+    color:var(--sage-deep);
+    font-variation-settings:"opsz" 144;
+    margin-left:.2rem;
+  }
+  .logo-text small{
+    display:block;
+    font-family:'JetBrains Mono',monospace;
+    font-size:.52rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--muted);margin-top:.2rem;
+    font-weight:400;
+  }
+  .logo-text .logo-est{
+    color:var(--sage-deep);
+    margin-top:.05rem;
+    letter-spacing:.32em;
+  }
+  .nav-links{display:flex;gap:2.2rem;align-items:center;transform:translateY(6px)}
+  /* === END LOGO OVERRIDE === */
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="main">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">S</span>
+      <span class="logo-text">Solutions <em>by Danielle</em><small>IV · Therapy · Wellness</small><small class="logo-est">Est. 2024</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="treatments.html">Treatments &amp; Services</a>
+      <a href="prices.html" class="active">Our Prices</a>
+      <a href="practitioner.html">About Us</a>
+      <a href="policies.html">Booking Policies &amp; Conditions</a>
+      <a href="book-now.html">Contact Us</a>
+      <a href="booking.html" class="btn">Book Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header class="page-head">
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to home</a>
+    <div class="eyebrow">Full Price List</div>
+    <h1>Transparent pricing, <em>every treatment.</em></h1>
+    <p class="sub">
+      Free top-up included with all anti-wrinkle and dermal filler treatments. Browse by category — every price includes consultation and aftercare.
+    </p>
+
+    <div class="tabs">
+      <a href="#anti-wrinkle" class="tab">Anti-Wrinkle</a>
+      <a href="#dermal-fillers" class="tab">Dermal Fillers</a>
+      <a href="#profhilo" class="tab">Profhilo</a>
+      <a href="#advanced-facials" class="tab">Advanced Facials</a>
+    </div>
+  </div>
+</header>
+
+<!-- PRICE LIST -->
+<section class="price-list">
+  <div class="container">
+
+    <!-- ANTI-WRINKLE -->
+    <div class="category" id="anti-wrinkle">
+      <div class="cat-head">
+        <h2>Anti-Wrinkle</h2>
+        <div class="cat-note">Free 2-week top-up included</div>
+      </div>
+      <div class="price-rows">
+        <div class="row">
+          <div class="row-name">
+            <strong>One Area</strong>
+            <span>Forehead, frown lines or crow's feet</span>
+          </div>
+          <div class="row-price">£150</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Two Areas</strong>
+            <span>Most popular — balanced upper-face refresh</span>
+          </div>
+          <div class="row-price">£200</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Three Areas</strong>
+            <span>Full upper face treatment</span>
+          </div>
+          <div class="row-price">£225</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Masseter (Jaw Slimming)</strong>
+            <span>Relaxes the jaw for a slimmer lower face</span>
+          </div>
+          <div class="row-price">£250</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Trap Tox</strong>
+            <span>Slims trapezius muscles, lengthens the neckline</span>
+          </div>
+          <div class="row-price">£350</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Lip Flip</strong>
+            <span>Subtle relaxation for a fuller-looking upper lip</span>
+          </div>
+          <div class="row-price">£80</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Nose Tip Lift</strong>
+            <span>Gently lifts the nasal tip for a refined profile</span>
+          </div>
+          <div class="row-price">£100</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Gummy Smile</strong>
+            <span>Reduces excessive gum show when smiling</span>
+          </div>
+          <div class="row-price">£100</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Bunny Lines</strong>
+            <span>Softens fine creases across the nose</span>
+          </div>
+          <div class="row-price">£80</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Hyperhidrosis (Anti-Sweating)</strong>
+            <span>Treats excessive sweating — underarms, palms or feet</span>
+          </div>
+          <div class="row-price">£400</div>
+        </div>
+      </div>
+      <div class="info-strip">
+        <strong>Included with every treatment:</strong> One-to-one consultation, medical history review, aftercare notes, and a complimentary 2-week review with top-up if needed.
+      </div>
+    </div>
+
+    <!-- DERMAL FILLERS -->
+    <div class="category" id="dermal-fillers">
+      <div class="cat-head">
+        <h2>Dermal Fillers</h2>
+        <div class="cat-note">Hyaluronic acid · Free top-up included</div>
+      </div>
+      <div class="price-rows">
+        <div class="row">
+          <div class="row-name">
+            <strong>Lip Filler — 0.5ml</strong>
+            <span>Subtle hydration and shape enhancement</span>
+          </div>
+          <div class="row-price">£160</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Lip Filler — 1ml</strong>
+            <span>Most popular — natural fullness and definition</span>
+          </div>
+          <div class="row-price">£200</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Smile Line Filler</strong>
+            <span>Softens nasolabial folds from nose to mouth</span>
+          </div>
+          <div class="row-price">£220</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Marionette Line Filler</strong>
+            <span>Lifts the downward lines around the mouth</span>
+          </div>
+          <div class="row-price">£220</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Cheek Filler — per ml</strong>
+            <span>Restores volume and lift in the midface</span>
+          </div>
+          <div class="row-price">£250</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Jawline Filler</strong>
+            <span>Sculpts and defines a sharper profile</span>
+          </div>
+          <div class="row-price">£350</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Chin Filler</strong>
+            <span>Improves facial balance and harmony</span>
+          </div>
+          <div class="row-price">£250</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Non-Surgical Rhinoplasty</strong>
+            <span>Refines nose shape — no surgery required</span>
+          </div>
+          <div class="row-price">£280</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Tear Trough Filler</strong>
+            <span>Brightens hollows and dark under-eye circles</span>
+          </div>
+          <div class="row-price">£300</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Temple Filler</strong>
+            <span>Restores lost volume, balances facial features</span>
+          </div>
+          <div class="row-price">£250</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Filler Dissolving</strong>
+            <span>Specialised reversal of unwanted filler</span>
+          </div>
+          <div class="row-price tba">On consultation</div>
+        </div>
+      </div>
+      <div class="info-strip">
+        <strong>Note:</strong> Premium fillers (Juvéderm, Restylane, Belotero) used throughout. Multi-area packages available — ask at consultation.
+      </div>
+    </div>
+
+    <!-- PROFHILO & SKIN BOOSTERS -->
+    <div class="category" id="profhilo">
+      <div class="cat-head">
+        <h2>Profhilo &amp; Skin Boosters</h2>
+        <div class="cat-note">Bio-remodelling &amp; deep hydration</div>
+      </div>
+      <div class="price-rows">
+        <div class="row">
+          <div class="row-name">
+            <strong>Profhilo Face — Single Session</strong>
+            <span>Full-face bio-remodelling for firmness and glow</span>
+          </div>
+          <div class="row-price">£250</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Profhilo Face — Course of 2</strong>
+            <span>Recommended starter course, 4 weeks apart</span>
+          </div>
+          <div class="row-price">£450</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Profhilo Body</strong>
+            <span>Neck, décolletage, arms or knees</span>
+          </div>
+          <div class="row-price">£280</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Skin Boosters (NCTF / Jalupro)</strong>
+            <span>Vitamin-rich micro-injections for radiance</span>
+          </div>
+          <div class="row-price">£200</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Polynucleotides — Face</strong>
+            <span>Regenerative DNA-based skin renewal</span>
+          </div>
+          <div class="row-price">£280</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Polynucleotides — Under Eye</strong>
+            <span>Targets dark circles and crepey under-eye skin</span>
+          </div>
+          <div class="row-price">£250</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Mesotherapy</strong>
+            <span>Customised vitamin cocktail per session</span>
+          </div>
+          <div class="row-price">£180</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Sunekos</strong>
+            <span>Amino acid &amp; HA blend for thin, fragile skin</span>
+          </div>
+          <div class="row-price">£220</div>
+        </div>
+      </div>
+      <div class="info-strip">
+        <strong>Best results:</strong> A course of 2–3 sessions, 4 weeks apart. Maintenance every 6 months.
+      </div>
+    </div>
+
+    <!-- ADVANCED FACIALS -->
+    <div class="category" id="advanced-facials">
+      <div class="cat-head">
+        <h2>Advanced Facials</h2>
+        <div class="cat-note">Microneedling · Exosomes · Bio-stimulators</div>
+      </div>
+      <div class="price-rows">
+        <div class="row">
+          <div class="row-name">
+            <strong>Microneedling — Single</strong>
+            <span>Stimulates natural collagen and skin repair</span>
+          </div>
+          <div class="row-price">£150</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Microneedling — Course of 3</strong>
+            <span>Recommended for visible, lasting transformation</span>
+          </div>
+          <div class="row-price">£380</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Exosome Facial</strong>
+            <span>Cutting-edge regenerative cellular renewal</span>
+          </div>
+          <div class="row-price">£350</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Sculptra (per vial)</strong>
+            <span>Bio-stimulator — builds collagen over months</span>
+          </div>
+          <div class="row-price">£450</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Radiesse (per syringe)</strong>
+            <span>Calcium-based filler with collagen-building action</span>
+          </div>
+          <div class="row-price">£400</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Pink Glow Treatment</strong>
+            <span>Gentle micro-infusion for instant radiance</span>
+          </div>
+          <div class="row-price">£180</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Vampire Facial (PRP + Microneedling)</strong>
+            <span>Uses your own platelets for natural renewal</span>
+          </div>
+          <div class="row-price">£280</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>PRP Hair Restoration</strong>
+            <span>Stimulates dormant follicles and thickens hair</span>
+          </div>
+          <div class="row-price">£280</div>
+        </div>
+        <div class="row">
+          <div class="row-name">
+            <strong>Neck &amp; Décolletage Treatment</strong>
+            <span>Targets crepey skin and pigmentation</span>
+          </div>
+          <div class="row-price">£220</div>
+        </div>
+      </div>
+      <div class="info-strip">
+        <strong>Packages available:</strong> Course of three with one complimentary session — ask at consultation.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <div class="container">
+    <h2>Not sure which is right for <em>you?</em></h2>
+    <a href="booking.html" class="btn">Book a free consultation</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div>© 2026 Solutions by Danielle. All rights reserved.</div>
+    <div>
+      <a href="index.html">Home</a> &nbsp;·&nbsp;
+      <a href="treatments.html">Treatments</a> &nbsp;·&nbsp;
+      <a href="book-now.html">Contact</a> &nbsp;·&nbsp;
+      <a href="privacy-terms.html">Privacy &amp; Terms</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Active state on tabs based on scroll position
+  const tabs = document.querySelectorAll('.tab');
+  const sections = Array.from(tabs).map(t => document.querySelector(t.getAttribute('href')));
+
+  function updateActiveTab(){
+    const scrollY = window.scrollY + 200;
+    let activeIdx = 0;
+    sections.forEach((sec, idx) => {
+      if (sec && sec.offsetTop <= scrollY) activeIdx = idx;
+    });
+    tabs.forEach((t, idx) => t.classList.toggle('active', idx === activeIdx));
+  }
+  window.addEventListener('scroll', updateActiveTab, { passive: true });
+  updateActiveTab();
+</script>
+
+</body>
+</html>
